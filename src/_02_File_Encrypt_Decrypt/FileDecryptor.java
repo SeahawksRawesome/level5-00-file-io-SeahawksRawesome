@@ -19,4 +19,13 @@ public class FileDecryptor {
 	 * Create a program that opens the file created by FileEncryptor and decrypts
 	 * the message, then display it to the user in a JOptionPane.
 	 */
+	public static void main(String [] args) {
+		FileEncryptor decode = new FileEncryptor();
+		
+		decrypt();
+	}
+	
+	public static void decrypt() {
+		
+	}
 }
