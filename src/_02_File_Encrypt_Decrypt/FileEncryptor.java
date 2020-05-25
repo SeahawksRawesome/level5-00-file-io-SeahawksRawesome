@@ -37,12 +37,11 @@ public class FileEncryptor {
 	public static void encrypt(String answer, int key) {
 		String shift = "";
 		for(int i = 0; i < answer.length(); i++) {
-			shift = answer.substring(key, answer.length());
-			shift += answer.substring(0, key);
+			char c = answer.charAt(i);
+			c = (char)(c+key);
+			shift += c;
 		}
-		System.out.println(answer);
 		System.out.println(shift);
-		
 		try {
 			FileWriter fw = new FileWriter("src/_02_File_Encrypt_Decrypt/Untitled 1", true);
 			
@@ -54,3 +53,4 @@ public class FileEncryptor {
 		}
 	}
 }
+//Copyright  © 2020 Brandon Powell
